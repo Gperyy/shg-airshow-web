@@ -39,7 +39,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "M.S.Ö. Hava ve Uzay Müzesi envanterindeki 1957 model Antonov AN-2 dünya çapında birçok askeri ve sivil kullanıcı tarafından kullanıldı. Dünyanın en büyük çift kanatlı uçağı olan Annie / Annushka SHG Airshow'da!"
         : "The 1957 Antonov AN-2 in the M.S.Ö. Air and Space Museum inventory has been used by many military and civilian users worldwide. Annie / Annushka, the world's largest biplane, is at SHG Airshow!",
-      image: "https://i.ibb.co/PzjG4Y3y/an.png",
+      image: "https://i.ibb.co/BHTvTVWm/antonov-an2.jpg",
       url: "https://msomuseum.com/antonov-an-2/"
     },
     {
@@ -305,6 +305,9 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
             </p>
             <a 
               href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+              }}
               className="inline-block bg-white text-primary font-black py-5 px-16 rounded-lg hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-sm"
             >
               {translations.cta.button}

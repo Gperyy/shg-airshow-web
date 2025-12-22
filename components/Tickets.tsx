@@ -11,7 +11,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
     subtitle: lang === 'TR' 
       ? 'Gökyüzünün limitlerini zorlayan gösteriye yerinizi ayırtın. Unutulmaz bir deneyim için biletinizi şimdi alın!'
       : 'Reserve your spot for the show that pushes the limits of the sky. Get your ticket now for an unforgettable experience!',
-    faqTitle: lang === 'TR' ? 'Sıkça Sorulan Sorular' : 'Frequently Asked Questions',
+    faqTitle: lang === 'TR' ? 'Sıkça Sorulan Sosular' : 'Frequently Asked Questions',
     faqSubtitle: lang === 'TR' ? 'Biletlerle ilgili aklınıza takılan her şey burada.' : 'Everything you need to know about tickets is right here.',
     addToCart: lang === 'TR' ? 'Sepete Ekle' : 'Add to Cart',
   };
@@ -88,6 +88,8 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
             allow="autoplay; fullscreen"
           ></iframe>
           <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/90"></div>
+          {/* Video yüklenmezse fallback görseli */}
+          <div className="absolute inset-0 z-[-1] bg-cover bg-center" style={{ backgroundImage: 'url(https://i.ibb.co/TMJgBnB8/seminozturksener.png)' }}></div>
         </div>
         <div className="relative z-20 container mx-auto px-4 lg:px-8">
           <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tighter uppercase drop-shadow-2xl">{translations.title}</h1>
