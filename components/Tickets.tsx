@@ -89,7 +89,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
           ></iframe>
           <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/90"></div>
           {/* Video yüklenmezse fallback görseli */}
-          <div className="absolute inset-0 z-[-1] bg-cover bg-center" style={{ backgroundImage: 'url(https://i.ibb.co/TMJgBnB8/seminozturksener.png)' }}></div>
+          <div className="absolute inset-0 z-[-1] bg-cover bg-center" style={{ backgroundImage: 'url(/images/semin-pilot.jpg)' }}></div>
         </div>
         <div className="relative z-20 container mx-auto px-4 lg:px-8">
           <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tighter uppercase drop-shadow-2xl">{translations.title}</h1>

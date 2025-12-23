@@ -31,7 +31,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Acromach Gökyüzü Dansçıları - Hava Akrobasi Grubu SHG Airshow 2026'da!"
         : "Acromach Sky Dancers - Aerial Aerobatics Group at SHG Airshow 2026!",
-      image: "https://i.ibb.co/gNyMvbF/acro.png",
+      image: "/images/acromach.jpg",
       url: seminUrl
     },
     {
@@ -39,7 +39,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "M.S.Ö. Hava ve Uzay Müzesi envanterindeki 1957 model Antonov AN-2 dünya çapında birçok askeri ve sivil kullanıcı tarafından kullanıldı. Dünyanın en büyük çift kanatlı uçağı olan Annie / Annushka SHG Airshow'da!"
         : "The 1957 Antonov AN-2 in the M.S.Ö. Air and Space Museum inventory has been used by many military and civilian users worldwide. Annie / Annushka, the world's largest biplane, is at SHG Airshow!",
-      image: "https://i.ibb.co/BHTvTVWm/antonov-an2.jpg",
+      image: "/images/antonov-an2.jpg",
       url: "https://msomuseum.com/antonov-an-2/"
     },
     {
@@ -47,14 +47,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Pist dışındaki arazilere ve kısa mesafelere rahatlıkla iniş-kalkış yapabilme özelliğine sahip olan Husky, seyircilere keyifli anlar yaşatmaya devam ediyor."
         : "With its ability to take off and land comfortably on off-runway terrain and short distances, the Husky continues to provide enjoyable moments for the audience.",
-      image: "https://i.ibb.co/G4dm99X1/husky.png"
+      image: "/images/aviat-husky.jpg"
     },
     {
       name: "BELL UH-1H (HUEY)",
       desc: lang === 'TR' 
         ? "\"Vietnam Gazisi\" UH-1H ön kısmında, hizmet verdiği vurucu tim ile özleşen sarı renkli büyük bir “ARI” figürü taşımaktadır. Dünyanın en ünlü helikopterlerinden biri olan Huey SHG Airshow'da!"
         : "The \"Vietnam Veteran\" UH-1H carries a large yellow \"BEE\" figure on its front, identified with the strike team it served. One of the world's most famous helicopters, the Huey, is at SHG Airshow!",
-      image: "https://i.ibb.co/1f0Bv2M8/uh.png",
+      image: "/images/uh1h.jpg",
       url: "https://msomuseum.com/bell-uh-1h-huey/"
     },
     {
@@ -62,7 +62,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Türkiye’nin uçar durumdaki en yaşlı çift kanatlı tayyareleri olan 1940 and 1943 Boeing Stearman A75N1, seyircileri adeta zaman makinesinde bir yolculuğa çıkaracak."
         : "The 1940 and 1943 Boeing Stearman A75N1, Turkey's oldest airworthy biplanes, will take the audience on a journey through time.",
-      image: "https://i.ibb.co/9Hdq7VQP/boe.png",
+      image: "/images/boeing-stearman.jpg",
       url: "https://msomuseum.com/a75n1-pt-17-boeing-stearman/"
     },
     {
@@ -70,7 +70,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Yılların eskimeyen, dünyanın en meşhur uçaklarından Cessna 172, SHG Airshow'da!"
         : "The timeless Cessna 172, one of the world's most famous aircraft, is at SHG Airshow!",
-      image: "https://i.ibb.co/FL8S65Ym/cess.png",
+      image: "/images/cessna172.jpg",
       url: "https://shm.aero/"
     },
     {
@@ -78,7 +78,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "M.S.Ö. Hava ve Uzay Müzesi'nin koleksiyonundan 1950 model Cessna 195 A Businessliner güzelliği ile SHG Airshow'da sizleri büyüleyecek."
         : "The 1950 Cessna 195 A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
-      image: "https://i.ibb.co/1GYpw8qT/cessna.png",
+      image: "/images/cessna-business.jpg",
       url: "https://msomuseum.com/cessna-195-a-businessliner/"
     },
     {
@@ -86,7 +86,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "9 dalda Oscar ödülü alan “The English Patient” (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth SHG Airshow'da sizlerle!"
         : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film \"The English Patient,\" is with you at SHG Airshow!",
-      image: "https://i.ibb.co/Gv7svwX4/tiger.png",
+      image: "/images/tiger-moth.jpg",
       url: "https://msomuseum.com/de-havilland-dh.82-tiger-moth/"
     },
     {
@@ -94,7 +94,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "M.S.Ö. Hava ve Uzay Müzesi'nin Türk havacılığına kazandırdığı 1940 Model DC-3 \"Turkish Delight\", 2017 yılında tam bir world turunu başarıyla tamamladı ve \"dünyayı dolaşan en yaşlı uçak\" ünvanını aldı. Bu muhteşem klasik hava aracı SHG Airshow'da sizlerle!"
         : "The 1940 Douglas DC-3 \"Turkish Delight,\" brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and earned the title of \"oldest aircraft to travel the world.\" This magnificent classic is at SHG Airshow!",
-      image: "https://i.ibb.co/8nNZZVXz/dc3.png",
+      image: "/images/dc3.jpg",
       url: "https://msomuseum.com/douglas-dc-3-turkish-delight/"
     },
     {
@@ -102,7 +102,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Asil vazifesi, “Türk Kadını’nın” havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow'da!"
         : "The Women Aviators Association, whose noble mission is to increase the aviation culture of \"Turkish Women,\" helping all women interested in aviation and aiming to increase the number of female flyers as much as possible, is at SHG Airshow!",
-      image: "https://i.ibb.co/m51RgjVP/hav.png",
+      image: "/images/havaci-kadinlar-dernegi.png",
       url: "https://www.havacikadinlar.org/"
     },
     {
@@ -110,7 +110,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Enfes lezzetleri ve zengin menüsüyle Lokanta Senan SHG Airshow'da!"
         : "Lokanta Senan, with its delicious tastes and rich menu, is at SHG Airshow!",
-      image: "https://i.ibb.co/qL1nqqXJ/lokanta.png",
+      image: "/images/lokanta-senan-.jpg",
       url: "https://lokantasenan.com/"
     },
     {
@@ -118,7 +118,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "1989 yılından bu yana sivil ve genel havacılık sektöründe hizmet veren Mach Havacılık SHG Airshow'da."
         : "Mach Aviation, serving the civil and general aviation sector since 1989, is at SHG Airshow.",
-      image: "https://i.ibb.co/7xg4rZSH/kjbsdg.png",
+      image: "/images/mach-aviation.jpg",
       url: "https://www.mach.aero/"
     },
     {
@@ -126,7 +126,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Türkiye'nin Uçan Havacılık Müzesi M.S.Ö. Hava ve Uzay Müzesi, world havacılığı açısından tarihi değere sahip pek çok uçağı ile SHG Airshow'da!"
         : "Turkey's Flying Aviation Museum, M.S.Ö. Air and Space Museum, is at SHG Airshow with many aircraft of historical value for world aviation!",
-      image: "https://i.ibb.co/fYS336kg/mso-museum.png",
+      image: "/images/mso-air-space-museum.png",
       url: msomuseumUrl
     },
     {
@@ -134,7 +134,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "M.S.Ö. Hava ve Uzay Müzesi’nin tarihi uçaklarıyla bağlantılı eşsiz kıyafet ve aksesuarlarıyla DÜKKAN, SHG Airshow'da!"
         : "The SHOP, with its unique clothing and accessories related to the historic aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow!",
-      image: "https://i.ibb.co/rRXNgyMf/dukkan.png",
+      image: "/images/dukkan.jpg",
       url: "https://shop.msomuseum.com/"
     },
     {
@@ -142,7 +142,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Ülkemize M.S.Ö. Hava ve Uzay Müzesi tarafından kazandırılan Ferocious Frankie Türkiye'deki ilk ve tek North American P-51 Mustang olma özelliğiyle SHG Airshow'da!"
         : "Ferocious Frankie, brought to our country by the M.S.Ö. Air and Space Museum, is at SHG Airshow as the first and only North American P-51 Mustang in Turkey!",
-      image: "https://i.ibb.co/Zpk0GNN2/mustang.png",
+      image: "/images/mustang-p51d.jpg",
       url: "https://msomuseum.com/north-american-p-51d-mustang-ferocious-frankie/"
     },
     {
@@ -150,7 +150,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "M.S.Ö. Hava ve Uzay Müzesi’nin kazandırdığı Türkiye’nin ilk sivil T-6G Harvard uçağı SHG Airshow’da mükemmel bir gösteri için huzurlarınızda olacak."
         : "Turkey's first civilian T-6G Harvard aircraft, brought by the M.S.Ö. Air and Space Museum, will be before you for a perfect show at SHG Airshow.",
-      image: "https://i.ibb.co/chnrxyyx/texan-t6.png",
+      image: "/images/t6-texan.jpg",
       url: "https://msomuseum.com/north-american-t-6g-happy-hour/"
     },
     {
@@ -158,7 +158,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "\"Tricycle İniş Takımına\" sahip ilk ABD eğitim uçağı olan Trojan, savaş uçağı olarak da kullanılmış olup, SHG Airshow'da seyircileri büyüleyecek."
         : "The Trojan, the first US trainer with \"Tricycle Landing Gear,\" was also used as a combat aircraft and will enchant the audience at SHG Airshow.",
-      image: "https://i.ibb.co/7FdLGNS/t28.png",
+      image: "/images/t28b-trojan.jpg",
       url: "https://msomuseum.com/t-28b_trojan/"
     },
     {
@@ -166,7 +166,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "22.777 adet üretilen ve bugün \"uçar vaziyette\" sadece 30 adet kalan Spitfire uçaklarından Mk.9 TE517 SHG Airshow'da Şanlı Hava Kuvvetleri'mizin \"Kare Fors\" amblemi ile donatılmış şekilde izleyicilerle buluşuyor!"
         : "One of the 22,777 built, with only about 30 remaining airworthy today, the Spitfire Mk.9 TE517 meets the audience at SHG Airshow, adorned with our Glorious Air Force's \"Square Roundel\"!",
-      image: "https://i.ibb.co/4gX1Qc8g/spitfire.png",
+      image: "/images/spitfire-mk-9.jpg",
       url: "https://msomuseum.com/spitfire-mk-9/"
     },
     {
@@ -174,7 +174,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Pars Şener, ilk hava gösterisi deneyimini 4 yaşında, dedesi ve Türkiye’nin ilk profesyonel akrobasi pilotu Ali İsmet Öztürk ile birlikte SHG Airshow 2024’te yaşadı. Şimdi ise SHG Airshow 2026’da, sürpriz gösterisiyle izleyicilerin karşısında olacak! 12 yıl sonra, 18 yaşına geldiğinde ilk solo gösterisini yapacak olmanın heyecanını da bugünden yaşıyor."
         : "Pars Şener experienced his first air show at the age of 4 with his grandfather and Turkey's first professional aerobatic pilot, Ali İsmet Öztürk, at SHG Airshow 2024. Now, at SHG Airshow 2026, he will be before the audience with a surprise show! He already feels the excitement of performing his first solo show in 12 years when he turns 18.",
-      image: "https://i.ibb.co/qMWLWx5h/parssener.png",
+      image: "/images/pars-sener.jpg",
       url: seminUrl
     },
     {
@@ -182,7 +182,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Türkiye’nin ilk profesyonel kadın akrobasi pilotu Semin Öztürk Şener Muhteşem Akrobasi Gösterisi ile SHG Airshow 2026'da nefeslerinizi kesecek!"
         : "Turkey's first professional female aerobatic pilot, Semin Öztürk Şener, will take your breath away with a magnificent aerobatic display at SHG Airshow 2026!",
-      image: "https://i.ibb.co/TMJgBnB8/seminozturksener.png",
+      image: "/images/semin-ozturk-sener.jpg",
       url: seminUrl
     },
     {
@@ -190,7 +190,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Türkiye'mizin \"İlk Sertifikalı Uçağı\" Vecihi XIV (14) replikası, M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün çalışmasıyla SHG Airshow 2026'da!"
         : "The replica of our country's \"First Certified Aircraft,\" Vecihi XIV (14), is at SHG Airshow 2026 through the collaboration of the M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
-      image: "https://i.ibb.co/Txm7DZrM/vecihi.png",
+      image: "/images/vecihi-14.jpg",
       url: "https://msomuseum.com/vecihi-XIV-14/"
     },
     {
@@ -198,7 +198,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "\"Efsanevi Mor Menekşe\" Mak Teknik'in özverili çalışmaları sonrası \"Yeni Menekşe\" adını aldı ve Semin Öztürk Şener ile göklerde yeni serüvenlerine devam ediyor."
         : "The \"Legendary Purple Violet,\" renamed \"New Violet\" after Mak Teknik's dedicated work, continues its adventures in the skies with Semin Öztürk Şener.",
-      image: "https://i.ibb.co/LzpJyWgD/yenimenekse.png",
+      image: "/images/yeni-menekse.jpg",
       url: seminUrl
     }
   ];
