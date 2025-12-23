@@ -70,7 +70,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang }) => {
       desc: lang === 'TR' 
         ? "Yılların eskimeyen, dünyanın en meşhur uçaklarından Cessna 172, SHG Airshow'da!"
         : "The timeless Cessna 172, one of the world's most famous aircraft, is at SHG Airshow!",
-      image: "/images/cessna172.jpg",
+      image: "/images/cessna-172.jpg",
       url: "https://shm.aero/"
     },
     {
