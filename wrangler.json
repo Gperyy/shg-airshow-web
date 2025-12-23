@@ -1,0 +1,8 @@
+{
+  "name": "shg-airshow-2026",
+  "compatibility_date": "2025-12-23",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  }
+}
