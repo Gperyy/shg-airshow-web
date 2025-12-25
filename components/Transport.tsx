@@ -1,0 +1,181 @@
+import React from 'react';
+import { Language } from '../App';
+
+interface TransportProps {
+  lang: Language;
+  onNavigate: (view: 'home') => void;
+}
+
+const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
+  const content = {
+    TR: {
+      tagline: "SİVRİHİSAR HAVA GÖSTERİLERİ'NE ULAŞIM",
+      title: "ULAŞIM",
+      landTitle: "Karadan Ulaşım",
+      landWarning: "Gösteri emniyeti sebebiyle, eski yol üzerinde araç parkına artık izin verilmeyecektir.",
+      airTitle: "Havadan Ulaşım",
+      technical: {
+        coords: "S.H.M. Koordinatları",
+        tower: "Artan Kule",
+        elev: "Rakım",
+        runwayDir: "Pist Yönleri",
+        runwayLen: "Pist Uzunluğu",
+        asphalt: "Asfalt"
+      },
+      downloadAip: "AIP dökümanını indir",
+      back: "ANA SAYFAYA DÖN"
+    },
+    EN: {
+      tagline: "JOURNEY TO SHG AIRSHOW",
+      title: "TRANSPORTATION",
+      landTitle: "Land Transportation",
+      landWarning: "Due to safety regulations, vehicle parking on the old road is no longer permitted.",
+      airTitle: "Air Transportation",
+      technical: {
+        coords: "S.H.M. Coordinates",
+        tower: "Artan Tower",
+        elev: "Elevation",
+        runwayDir: "Runway Directions",
+        runwayLen: "Runway Length",
+        asphalt: "Asphalt"
+      },
+      downloadAip: "Download AIP Document",
+      back: "BACK TO HOME"
+    }
+  }[lang];
+
+  return (
+    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
+      {/* Hero Header */}
+      <div className="w-full h-[35vh] md:h-[50vh] overflow-hidden relative">
+        <img 
+          src="/images/05-pist-shm.jpg" 
+          className="w-full h-full object-cover opacity-80"
+          alt="Aerial Transportation"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-transparent to-black/20"></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-6 -mt-32 relative z-10">
+        <header className="mb-16">
+          <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
+            {content.tagline}
+          </p>
+          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+            {content.title}<span className="text-primary">.</span>
+          </h1>
+          <div className="w-16 h-1 bg-primary"></div>
+        </header>
+
+        {/* 1- Land Transportation */}
+        <section className="mb-24">
+          <h2 className="text-3xl font-black text-secondary dark:text-white mb-8 flex items-center gap-4">
+            <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">1</span>
+            {content.landTitle}
+          </h2>
+          
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-white/5 mb-8 group">
+            <img 
+              src="/images/ulasim.jpeg" 
+              className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+              alt="Transportation Map"
+              onError={(e) => {
+                e.currentTarget.src = "https://static.wixstatic.com/media/12c382_e50d53c7c7a44f77975c74384a86b19a~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ulasim.jpg";
+              }}
+            />
+          </div>
+          
+          <div className="bg-red-50 dark:bg-red-900/10 border-l-4 border-primary p-6 rounded-r-xl">
+            <p className="text-lg font-bold text-red-700 dark:text-red-400">
+              <span className="material-icons align-middle mr-2">error_outline</span>
+              {content.landWarning}
+            </p>
+          </div>
+        </section>
+
+        {/* 2- Air Transportation */}
+        <section className="mb-24">
+          <h2 className="text-3xl font-black text-secondary dark:text-white mb-8 flex items-center gap-4">
+            <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">2</span>
+            {content.airTitle}
+          </h2>
+          
+          <div className="bg-secondary dark:bg-black/40 rounded-3xl p-10 shadow-2xl border border-white/5 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
+              <span className="material-icons text-[160px]">flight</span>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
+              <div className="space-y-8">
+                <div>
+                  <h4 className="text-[10px] font-black text-gray-500 tracking-[0.3em] uppercase mb-2">{content.technical.coords}</h4>
+                  <p className="text-2xl font-black text-white font-mono">N 39°17'59.29''</p>
+                  <p className="text-2xl font-black text-white font-mono">E 31°29'38.50''</p>
+                </div>
+                <div>
+                  <h4 className="text-[10px] font-black text-gray-500 tracking-[0.3em] uppercase mb-2">{content.technical.tower}</h4>
+                  <p className="text-3xl font-black text-primary">131,625 MHz</p>
+                </div>
+              </div>
+              
+              <div className="space-y-8">
+                <div>
+                  <h4 className="text-[10px] font-black text-gray-500 tracking-[0.3em] uppercase mb-2">{content.technical.elev}</h4>
+                  <p className="text-2xl font-black text-white">2.790 Feet</p>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="text-[10px] font-black text-gray-500 tracking-[0.3em] uppercase mb-2">{content.technical.runwayDir}</h4>
+                    <p className="text-2xl font-black text-white">05 - 23</p>
+                  </div>
+                  <div>
+                    <h4 className="text-[10px] font-black text-gray-500 tracking-[0.3em] uppercase mb-2">{content.technical.runwayLen}</h4>
+                    <p className="text-xl font-black text-white leading-tight">1810 m x 32 m <span className="text-xs text-primary block uppercase">({content.technical.asphalt})</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <a 
+                href="/SHM_AIP.pdf" 
+                download="SHM_AIP.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group cursor-pointer inline-flex"
+              >
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary transition-all">
+                  <span className="material-icons text-primary group-hover:text-white transition-colors">description</span>
+                </div>
+                <span className="text-sm font-black text-white tracking-widest uppercase group-hover:text-primary transition-colors">
+                  {content.downloadAip}
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Live Map Area - GÜNCEL KONUM BİLGİSİ İLE */}
+        <section className="mb-24">
+          <div className="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
+            <iframe 
+              title="Sivrihisar Havacılık Merkezi"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1543.8064625175332!2d31.484231403337173!3d39.297027976231945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cdfd073d852337%3A0xd2f34784f222f435!2sSivrihisar%20Havac%C4%B1l%C4%B1k%20Merkezi!5e0!3m2!1str!2str!4v1766698409372!5m2!1str!2str" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+
+        <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Transport;

@@ -2,7 +2,8 @@ import React from "react";
 import { Language } from "../App";
 
 interface HeroProps {
-  onNavigate: (view: "home" | "program") => void;
+  // onNavigate tipine diğer sayfaları da ekledik ki hata vermesin
+  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport") => void;
   lang: Language;
 }
 
@@ -29,7 +30,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
   return (
     <section className="relative mt-0 sm:mt-4 min-h-[70vh] md:min-h-[85vh] flex items-center justify-center text-center text-white overflow-hidden group shadow-2xl bg-secondary">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-secondary">
-        {/* Güncellenen Video Alanı */}
         <video
           autoPlay
           muted
@@ -37,6 +37,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           playsInline
           className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover scale-105"
         >
+          {/* Video dosya adının doğru olduğundan emin olun (shg-airshow-2025.mp4) */}
           <source src="/images/shg-airshow-2025.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
         </video>
@@ -57,15 +58,17 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-center gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000">
-          <a
-            href="#"
+          <button
+            onClick={() => onNavigate("tickets")} // Bilet Al butonu için de yönlendirme eklendi
             className="bg-white text-secondary font-extrabold py-4 px-12 rounded-md hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-2xl uppercase text-sm tracking-widest flex items-center justify-center gap-2 group/btn"
           >
             <span className="material-icons text-lg group-hover/btn:rotate-12 transition-transform">
               local_activity
             </span>
             {translations.buyTicket}
-          </a>
+          </button>
+          
+          {/* GÖSTERİ PROGRAMI BUTONU */}
           <button
             onClick={() => onNavigate("program")}
             className="bg-primary text-white font-extrabold py-4 px-12 rounded-md hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-2xl uppercase text-sm tracking-widest border border-primary/20 flex items-center justify-center gap-2 group/btn"
