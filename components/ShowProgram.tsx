@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Language } from '../App';
+import * as htmlToImage from 'html-to-image';
 
 interface ProgramItem {
   time: string;
@@ -13,6 +14,7 @@ interface ShowProgramProps {
 
 const ShowProgram: React.FC<ShowProgramProps> = ({ lang }) => {
   const [activeDay, setActiveDay] = useState(0);
+  const tableRef = useRef<HTMLDivElement>(null);
 
   const programs: Record<number, ProgramItem[]> = {
     0: [
@@ -46,8 +48,25 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang }) => {
       duration: lang === 'TR' ? 'Süre' : 'Duration',
     },
     actions: {
-      print: lang === 'TR' ? 'Listeyi Yazdır' : 'Print List',
-      download: lang === 'TR' ? 'PDF Olarak İndir' : 'Download as PDF',
+      download: lang === 'TR' ? 'PROGRAMI İNDİR' : 'DOWNLOAD PROGRAM',
+    }
+  };
+
+  // JPEG Olarak İndirme Fonksiyonu (Arka plan lacivert olarak ayarlandı)
+  const handleDownloadImage = async () => {
+    if (tableRef.current === null) return;
+    
+    try {
+      const dataUrl = await htmlToImage.toJpeg(tableRef.current, { 
+        quality: 0.95, 
+        backgroundColor: '#0A1427' // Sitenin lacivert tonu
+      });
+      const link = document.createElement('a');
+      link.download = `shg-airshow-2026-program-${activeDay + 1}.jpeg`;
+      link.href = dataUrl;
+      link.click();
+    } catch (err) {
+      console.error('İndirme hatası:', err);
     }
   };
 
@@ -77,8 +96,8 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang }) => {
           ))}
         </div>
 
-        {/* Program Tablosu */}
-        <div className="bg-white dark:bg-gray-900/40 rounded-2xl overflow-hidden shadow-2xl border border-gray-200/50 dark:border-gray-800 backdrop-blur-xl mb-12">
+        {/* Program Tablosu - İndirilecek Bölüm */}
+        <div ref={tableRef} className="bg-white dark:bg-gray-900/40 rounded-2xl overflow-hidden shadow-2xl border border-gray-200/50 dark:border-gray-800 backdrop-blur-xl mb-12 p-2 sm:p-0">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse table-fixed min-w-[600px]">
               <thead className="bg-gray-50 dark:bg-black/40">
@@ -107,13 +126,12 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang }) => {
           </div>
         </div>
 
-        {/* Aksiyon Butonları */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <button className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-extrabold py-4 px-10 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-all active:scale-95 uppercase text-xs tracking-widest border border-gray-200 dark:border-gray-700">
-            <span className="material-icons text-xl">print</span>
-            {translations.actions.print}
-          </button>
-          <button className="w-full sm:w-auto flex items-center justify-center gap-3 bg-primary text-white font-extrabold py-4 px-10 rounded-xl hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95 uppercase text-xs tracking-widest">
+        {/* Yeni Programı İndir Butonu */}
+        <div className="flex items-center justify-center mb-12">
+          <button 
+            onClick={handleDownloadImage}
+            className="w-full sm:w-auto flex items-center justify-center gap-3 bg-primary text-white font-extrabold py-4 px-12 rounded-xl hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95 uppercase text-[11px] tracking-[0.2em]"
+          >
             <span className="material-icons text-xl">file_download</span>
             {translations.actions.download}
           </button>
