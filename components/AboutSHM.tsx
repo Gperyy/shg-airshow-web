@@ -132,7 +132,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
                 <span className="text-2xl font-black italic">2790 FEET</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] text-gray-500 font-black tracking-widest uppercase mb-1">CONTACT</span>
+                <span className="text-[10px] text-gray-500 font-black tracking-widest uppercase mb-1">İLETİŞİM</span>
                 <a href="tel:+902227243040" className="text-sm font-bold hover:text-primary transition-colors">+90 (222) 724 30 40 - 41</a>
                 <span className="text-sm font-medium text-gray-400">Fax: +90 (222) 724 30 11</span>
               </div>

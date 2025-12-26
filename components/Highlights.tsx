@@ -41,7 +41,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       id: "transport", // BURASI GÜNCELLENDİ: Transport.tsx sayfasını tetikler
       desc:
         lang === "TR"
-          ? "Sivrihisar Hava Gösterilerine nasıl gidilir?"
+          ? "Sivrihisar Hava Gösterilerine nasıl ulaşılır?"
           : "How to get to Sivrihisar Airshow?",
       image: "/images/shg-ulasim.jpg",
     },
