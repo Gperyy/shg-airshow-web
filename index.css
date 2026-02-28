@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #DC2626;
+  --color-secondary: #0A1427;
+  --color-background-light: #F3F4F6;
+  --color-background-dark: #0A1427;
+
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
+
+  --radius: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.hero-video-fallback {
+  background-color: #0A1427;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.texture-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 8px 8px;
+}
